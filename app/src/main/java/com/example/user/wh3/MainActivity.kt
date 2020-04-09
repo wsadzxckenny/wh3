@@ -9,6 +9,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var user: String =savedInstanceState!!.get("Name").toString()
+        textView.setText(user)
         button.setOnClickListener{
             textView.setText(editText.text)
             var inputStr =editText.text.toString();
